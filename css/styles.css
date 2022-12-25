@@ -43,20 +43,18 @@ html {
 }
 
 body {
-  font-family: 'roboto';
-  font-weight: 400;
   background-color: var(--primary-background);
 }
 
 .container {
   width: 80rem;
   margin: auto;
-  border: 1px solid #ccc;
 }
 
 header {
   text-align: center;
-  padding: 5rem;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
 }
 
 header > h1 {
@@ -66,6 +64,7 @@ header > h1 {
 }
 
 .commands-list-container {
+  font-family: 'roboto';
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -78,7 +77,7 @@ header > h1 {
 
 .commands-list > h3 {
   font-size: 1.8rem;
-  letter-spacing: 0.1rem;
+  font-weight: 500;
   padding-bottom: 2rem;
 }
 
