@@ -46,11 +46,6 @@ body {
   background-color: var(--primary-background);
 }
 
-.container {
-  width: 80rem;
-  margin: auto;
-}
-
 header {
   text-align: center;
   padding-top: 7rem;
@@ -63,11 +58,13 @@ header > h1 {
   text-decoration: underline;
 }
 
+.commands-list-container-outer {
+  display: flex;
+  justify-content: center;
+}
+
 .commands-list-container {
   font-family: 'roboto';
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 }
 
 .commands-list {
@@ -83,12 +80,8 @@ header > h1 {
 
 .commands-list > .command-row {
   display: flex;
-  justify-content: center;
   gap: 2rem;
   font-size: 1.6rem;
-}
-
-.commands-list > .command-row > .command {
 }
 
 .commands-list > .command-row > .command-desc {
