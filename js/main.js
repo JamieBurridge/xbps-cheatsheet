@@ -52,6 +52,23 @@ const dataCommands = [
       },
     ],
   },
+  {
+    heading: 'Source',
+    commands: [
+      {
+        command: `${Commands.src} pkg ${PACKAGE_NAME}`,
+        description: 'Builds package from source',
+      },
+      {
+        command: `${Commands.install} --repository=hostdir/binpkgs/ ${PACKAGE_NAME}`,
+        description: 'Install package',
+      },
+      {
+        command: `${Commands.install} --repository=hostdir/binpkgs/nonfree ${PACKAGE_NAME}`,
+        description: 'Install nonfree packages',
+      },
+    ],
+  },
 ];
 
 dataCommands.forEach((data) => {

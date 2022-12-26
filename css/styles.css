@@ -58,9 +58,8 @@ header > h1 {
 }
 
 .commands-list > .command-row {
-  font-size: 1.4rem;
-  display: grid;
-  grid-template-columns: 20rem 2rem auto;
+  font-size: 1.35rem;
+  display: flex;
   gap: 1rem;
   padding-bottom: 1rem;
 }
