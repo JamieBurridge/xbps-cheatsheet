@@ -54,7 +54,7 @@ const dataCommands = [
   },
 ];
 
-dataCommands.forEach((data, index) => {
+dataCommands.forEach((data) => {
   // Container
   const commandsListContainerEl = document.querySelector(
     '.commands-list-container'
@@ -69,7 +69,7 @@ dataCommands.forEach((data, index) => {
   commandSectionEl.appendChild(sectionHeadingEl);
 
   // Commands
-  data.commands.forEach((commandData, index) => {
+  data.commands.forEach((commandData) => {
     const commandRowEl = document.createElement('div');
     const commandEl = document.createElement('p');
     const commandDescEl = document.createElement('p');
