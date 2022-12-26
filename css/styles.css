@@ -81,14 +81,14 @@ header > h1 {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+
     padding-left: 1rem;
   }
   .commands-list > .command-row > .command-desc::before {
     content: '';
-    border-radius: 50%;
     width: 0.5rem;
     height: 0.5rem;
+    border-radius: 50%;
     background-color: #000;
-    opacity: 1;
   }
 }
