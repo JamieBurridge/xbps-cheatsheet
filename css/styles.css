@@ -48,6 +48,8 @@ header > h1 {
 
 .commands-list {
   padding-bottom: 4rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .commands-list > h3 {
@@ -66,4 +68,27 @@ header > h1 {
 
 .commands-list > .command-row > .command-desc {
   opacity: 0.6;
+}
+
+@media screen and (max-width: 700px) {
+  .commands-list > .command-row {
+    flex-direction: column;
+  }
+  .commands-list > .command-row > div {
+    display: none;
+  }
+  .commands-list > .command-row > .command-desc {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-left: 1rem;
+  }
+  .commands-list > .command-row > .command-desc::before {
+    content: '';
+    border-radius: 50%;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #000;
+    opacity: 1;
+  }
 }
