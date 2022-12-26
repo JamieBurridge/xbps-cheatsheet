@@ -58,10 +58,10 @@ header > h1 {
 }
 
 .commands-list > .command-row {
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   display: flex;
   gap: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 1.25rem;
 }
 
 .commands-list > .command-row > .command-desc {
