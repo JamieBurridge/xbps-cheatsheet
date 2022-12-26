@@ -1,6 +1,6 @@
 # xbps cheatsheet
 
-Cheatsheet for the xbps package manager.
+Unoficial cheatsheet for the xbps package manager.
 
 I have tried to just add the basic commands that are common in day-to-day use.
 
