@@ -1,28 +1,7 @@
 @font-face {
   font-family: 'roboto';
-  src: url('../assets/fonts/roboto/Roboto-Medium-webfont.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'roboto';
   src: url('../assets/fonts/roboto/Roboto-Regular-webfont.woff') format('woff');
   font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'roboto';
-  src: url('../assets/fonts/roboto/Roboto-Thin-webfont.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'barlow';
-  src: url('../assets/fonts/barlow/Barlow-Thin-webfont.woff') format('woff');
-  font-weight: thin;
   font-style: normal;
 }
 
@@ -53,9 +32,9 @@ header {
 }
 
 header > h1 {
-  font-family: 'barlow';
+  font-family: 'roboto';
   font-size: 3.5rem;
-  text-decoration: underline;
+  font-weight: 400;
 }
 
 .commands-list-container-outer {
@@ -64,24 +43,26 @@ header > h1 {
 }
 
 .commands-list-container {
-  font-family: 'roboto';
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .commands-list {
-  font-size: 1.2rem;
   padding-bottom: 4rem;
 }
 
 .commands-list > h3 {
   font-size: 1.8rem;
   font-weight: 500;
+  text-decoration: underline #000 1px;
   padding-bottom: 2rem;
 }
 
 .commands-list > .command-row {
-  display: flex;
-  gap: 2rem;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  display: grid;
+  grid-template-columns: 20rem 2rem auto;
+  gap: 1rem;
+  padding-bottom: 1rem;
 }
 
 .commands-list > .command-row > .command-desc {

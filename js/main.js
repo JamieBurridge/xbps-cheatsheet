@@ -1,21 +1,54 @@
 const PACKAGE_NAME = '<package>';
 
+const Commands = {
+  install: 'xbps-install',
+  remove: 'xbps-remove',
+  query: 'xbps-query',
+  src: './xbps-src',
+};
+
 const dataCommands = [
   {
     heading: 'Installing',
     commands: [
       {
-        command: `xbps-install ${PACKAGE_NAME}`,
+        command: `${Commands.install} ${PACKAGE_NAME}`,
         description: 'Install a package',
       },
+      {
+        command: `${Commands.install} -Su`,
+        description: 'Sync repositories and update system',
+      },
+      ,
     ],
   },
   {
     heading: 'Removing',
     commands: [
       {
-        command: `xbps-remove ${PACKAGE_NAME}`,
+        command: `${Commands.remove} ${PACKAGE_NAME}`,
         description: 'Remove a package',
+      },
+      {
+        command: `${Commands.remove} -R ${PACKAGE_NAME}`,
+        description: 'Remove package and unused dependencies',
+      },
+      {
+        command: `${Commands.remove} -Oo`,
+        description: 'Clean cache and remove unsused dependencies',
+      },
+    ],
+  },
+  {
+    heading: 'Querying',
+    commands: [
+      {
+        command: `${Commands.query} -Rs ${PACKAGE_NAME}`,
+        description: 'Search for package in the repositories',
+      },
+      {
+        command: `${Commands.query} -l`,
+        description: 'Lists all installed packages',
       },
     ],
   },
@@ -36,7 +69,7 @@ dataCommands.forEach((data, index) => {
   commandSectionEl.appendChild(sectionHeadingEl);
 
   // Commands
-  for (let i = 0; i < data.commands.length; i++) {
+  data.commands.forEach((commandData, index) => {
     const commandRowEl = document.createElement('div');
     const commandEl = document.createElement('p');
     const commandDescEl = document.createElement('p');
@@ -46,13 +79,13 @@ dataCommands.forEach((data, index) => {
     commandEl.className = 'command';
     commandDescEl.className = 'command-desc';
 
-    commandEl.textContent = data.commands[i].command;
-    commandDescEl.textContent = data.commands[i].description;
+    commandEl.textContent = commandData.command;
+    commandDescEl.textContent = commandData.description;
     commandDividorEl.textContent = '|';
 
     commandRowEl.appendChild(commandEl);
     commandRowEl.appendChild(commandDividorEl);
     commandRowEl.appendChild(commandDescEl);
     commandSectionEl.appendChild(commandRowEl);
-  }
+  });
 });
